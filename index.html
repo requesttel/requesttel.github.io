@@ -131,10 +131,8 @@
       $phone = id("btn_main");
       $phone.setAttribute("href", _url);
       $phone.addEventListener("click", function () {
-        window.open(_url);
-        
-        window.close();
- });
+        window.location.href = _url;
+      });
     }
 
     if (title !== undefined) {
