@@ -99,7 +99,9 @@
 
     let _addr = "https://requesttel.github.io/?phone="+encodeURIComponent("+74950101010")+"&title="+encodeURIComponent("+7 (495) 010 10 10")+"&desc="+encodeURIComponent("Телефонный номер");
     console.log(_addr); // fake
-        
+
+    console.log(document.location.href);
+
     if (document.location.search) {
       addr = new URL(document.location.href);
     } else {
