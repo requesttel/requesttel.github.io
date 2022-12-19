@@ -100,7 +100,8 @@
     let _test = "https://requesttel.github.io/?phone="+encodeURIComponent("+74950101010")+"&title="+encodeURIComponent("+7 (495) 010 10 10")+"&desc="+encodeURIComponent("Телефонный номер");
     console.log(_test);
 
-    let addr = new URL(document.location.href);
+    //let addr = new URL(document.location.href);
+    let addr = new URL(_test);
     console.log(addr);
     
     if (addr.searchParams.has('phone')) {
