@@ -135,6 +135,7 @@
 
         window.open('','_self').close();
         /*
+          // or
           window.opener = self;
           window.close();
         */
@@ -151,19 +152,20 @@
       $desc.innerText = desc;
     }     
 
-    //let paramsString = document.location.search; // ?page=4&limit=10&sortby=desc  
-    //let searchParams = new URLSearchParams(paramsString);
-    //console.log (paramsString);
-    //console.log (searchParams);
-    /*for(let pair of searchParams.entries()) {
-      console.log(pair[0]+ ', '+ pair[1]); 
-    }*/
-    /*
-    searchParams.has("limit"); // true
-    searchParams.has("sortby"); // true
-    searchParams.has("orderby"); // false
-    */
    /**
+    * 
+    * let paramsString = document.location.search; // ?page=4&limit=10&sortby=desc  
+    * let searchParams = new URLSearchParams(paramsString);
+    * 
+    * for(let pair of searchParams.entries()) {
+    *   console.log(pair[0]+ ', '+ pair[1]); 
+    * }
+    * 
+    * 
+    * searchParams.has("limit"); // true
+    * searchParams.has("sortby"); // true
+    * searchParams.has("orderby"); // false
+    * 
     * 
     * document.location.href	      https://realadmin.ru/saytostroy/?page=4#top
     * document.location.protocol	  https:
