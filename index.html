@@ -131,9 +131,9 @@
       $phone = id("btn_main");
       $phone.setAttribute("href", _url);
       $phone.addEventListener("click", function () {
+        window.open('','_self');
         window.location.href = _url;
-
-        window.open('','_self').close();
+        window.close();
         /*
           // or
           window.opener = self;
