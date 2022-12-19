@@ -127,8 +127,13 @@
     function id( s ) { return document.getElementById( s ); }
 
     if (phone !== undefined) {
+      let _url = "tel:" + phone;
       $phone = id("btn_main");
-      $phone.setAttribute("href", "tel:" + phone);
+      $phone.setAttribute("href", _url);
+      $phone.addEventListener("click", function () {
+        window.location.href = url;
+        window.close();
+ });
     }
 
     if (title !== undefined) {
