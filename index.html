@@ -133,14 +133,12 @@
       $phone.addEventListener("click", function () {
         window.location.href = _url;
 
-        //window.open('','_self').close();
+        window.open('','_self').close();
         /*
           // or
           window.opener = self;
           window.close();
         */
-        window.opener = self;
-        window.close();
       });
     }
 
