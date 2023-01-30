@@ -80,7 +80,7 @@
         </div>
       </header>
 
-      <main class="px-3">
+      <main id="main" class="px-3">
         <h1 id="h_main">+7 (495) 000 00 00</h1>
         <p id="description_main"class="lead">Телефонный номер</p>
         <p class="lead">
@@ -127,23 +127,28 @@
     function id( s ) { return document.getElementById( s ); }
 
     if (phone !== undefined) {
-      let _url = "tel:" + phone;
-      $phone = id("btn_main");
-      $phone.setAttribute("href", _url);
-      $phone.addEventListener("click", function () {
+      let _url = 'tel:' + phone;
+      
+      $phone = id('btn_main');
+      $phone.setAttribute('href', _url);
+
+      $phone.addEventListener('click', function () {
+        $main = id('main');
+        $main.innerHTML = '';
         window.open('','_self');
         window.location.href = _url;
         window.close();
+
       });
     }
 
     if (title !== undefined) {
-      $title = id("h_main");
+      $title = id('h_main');
       $title.innerText = title;
     }
 
     if (desc !== undefined) {
-      $desc = id("description_main");
+      $desc = id('description_main');
       $desc.innerText = desc;
     }     
 
