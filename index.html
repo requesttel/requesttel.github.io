@@ -100,7 +100,7 @@
     // fake
     let _addr = "https://requesttel.github.io/?phone="+encodeURIComponent("+74950101010")+"&title="+encodeURIComponent("+7 (495) 010 10 10")+"&desc="+encodeURIComponent("Телефонный номер");
     console.log(_addr);
-    let addr_;
+    let addr_, phone_, title_, desc_;
 
     // if searchParams is undefined
     if (document.location.search) {
@@ -125,17 +125,26 @@
 
     if (addr.searchParams.has('title')) {
       title = addr.searchParams.get('title');
-      console.log(phone);
+      console.log(title);
+    }
+
+    if (addr_.searchParams.has('title')) {
+      title_ = addr_.searchParams.get('title');
+      console.log(title_);
     }
 
     if (addr.searchParams.has('desc')) {
       desc = addr.searchParams.get('desc');
     }
 
+    if (addr_.searchParams.has('desc')) {
+      desc_ = addr_.searchParams.get('desc');
+    }
+
     function id( s ) { return document.getElementById( s ); }
 
-    if (phone !== undefined) {
-      let _url = 'tel:' + phone;
+    if (phone_ !== undefined) {
+      let _url = 'tel:' + phone_;
       
       $phone = id('btn_main');
       $phone.setAttribute('href', _url);
@@ -150,14 +159,14 @@
       });
     }
 
-    if (title !== undefined) {
+    if (title_ !== undefined) {
       $title = id('h_main');
-      $title.innerText = title;
+      $title.innerText = title_;
     }
 
-    if (desc !== undefined) {
+    if (desc_ !== undefined) {
       $desc = id('description_main');
-      $desc.innerText = desc;
+      $desc.innerText = desc_;
     }     
 
    /**
