@@ -103,6 +103,7 @@
 
     // if searchParams is undefined
     if (document.location.search) {
+      console.log(document.location.href);
       addr = new URL(decodeURIComponent(document.location.href));
     } else {
       addr = new URL(_addr);
