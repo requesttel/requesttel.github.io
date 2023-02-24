@@ -113,29 +113,29 @@
     
     console.log(addr);
     
-    if (addr.searchParams.has('phone')) {
+    /*if (addr.searchParams.has('phone')) {
       phone = addr.searchParams.get('phone');
       console.log(phone);
-    }
+    }*/
 
     if (addr_.searchParams.has('phone')) {
       phone_ = decodeURIComponent(addr_.searchParams.get('phone'));
       console.log(phone_);
     }
 
-    if (addr.searchParams.has('title')) {
+    /*if (addr.searchParams.has('title')) {
       title = addr.searchParams.get('title');
       console.log(title);
-    }
+    }*/
 
     if (addr_.searchParams.has('title')) {
       title_ = decodeURIComponent(addr_.searchParams.get('title'));
       console.log(title_);
     }
 
-    if (addr.searchParams.has('desc')) {
+    /*if (addr.searchParams.has('desc')) {
       desc = addr.searchParams.get('desc');
-    }
+    }*/
 
     if (addr_.searchParams.has('desc')) {
       desc_ = decodeURIComponent(addr_.searchParams.get('desc'));
